@@ -1,0 +1,29 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    New Page
+{% endblock %}
+
+{% block body %}
+
+    <h1>Create a New Page</h1>
+    <div>
+        <form method="post" action="{% url 'new' %}">
+            {% include 'encyclopedia/messages.html' %}
+            {% csrf_token %}
+            <div class="">
+                <div class="form-group">
+                    <label class="col-sm-3 col-form-label">Title for the page</label>
+                <input class="col-sm-3 col-form-label" type="text" name="title" value="{{request.POST.title}}">
+                </div>
+                <div class="form-group">
+                    <label>Content of the page (markdown notation)</label>
+                    <textarea cols="100" rows="10" name="content" id="content"
+                              style="height: 250px" value="{{request.POST.content}}"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

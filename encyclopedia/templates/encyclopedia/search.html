@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Possible Pages
+{% endblock %}
+
+{% block body %}
+    <h1>Possible Pages</h1>
+
+    <ul>
+        {% for entry in entries %}
+        <li>
+            {% url 'entry' title=entry as the_url %}
+            <a href="{{ the_url }}">{{ entry|safe }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

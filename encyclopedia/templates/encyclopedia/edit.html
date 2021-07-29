@@ -1,0 +1,29 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Edit Page | {{ title|safe }}
+{% endblock %}
+
+{% block body %}
+
+    <h1>Edit Page</h1>
+    <div>
+        {% url 'edit' title=title as the_url %}
+        <form method="post" action="{{ the_url }}">
+            {% include 'encyclopedia/messages.html' %}
+            {% csrf_token %}
+            <div class="">
+                <div class="form-group">
+                    <label class="col-sm-3 col-form-label">Page Title</label>
+                <input class="col-sm-3 col-form-label" type="text" name="title" value="{{ title }}">
+                </div>
+                <div class="form-group">
+                    <label>Content of the page (markdown notation)</label>
+                    <textarea cols="100" rows="20" name="content" style="height: 250px">{{ content|safe }}</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

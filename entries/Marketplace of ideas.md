@@ -1,0 +1,3 @@
+# Marketplace of ideas
+
+The marketplace of ideas is a rationale for freedom of expression based on an analogy to the economic concept of a free market. The marketplace of ideas holds that the truth will emerge from the competition of ideas in free, transparent public discourse and concludes that ideas and ideologies will be culled according to their superiority or inferiority and widespread acceptance among the population. The concept is often applied to discussions of patent law as well as freedom of the press and the responsibilities of the media in a liberal democracy.
